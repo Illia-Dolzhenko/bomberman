@@ -1,0 +1,9 @@
+pub const SIZE_IN_CELLS: usize = 30;
+pub const FIELD_SIZE: f32 = 960.;
+pub const HEIGHT: f32 = 960.;
+pub const CELL_SIZE: f32 = FIELD_SIZE / 30.;
+pub const BOMB_TIMER: u64 = 3;
+pub const EXPLOSION_SIZE: i32 = 3;
+pub const CELL_OFFSET: f32 = CELL_SIZE / 2.;
+pub const FIELD_OFFSET: f32 = FIELD_SIZE / 2.;
+pub const MOVE_ANIMATION_DURATION: u64 = 100;
