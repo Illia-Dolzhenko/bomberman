@@ -60,6 +60,7 @@ fn main() {
         .add_system(explosion_destruction_system)
         .add_system(enemy_kill_player_system)
         .add_system(debug_kill_enemy)
+        .add_system(player_health_system)
         .run();
 }
 

@@ -2,6 +2,7 @@ use std::time::Duration;
 
 use crate::components::*;
 use crate::constants::*;
+use bevy::app::AppExit;
 use bevy::prelude::*;
 use bevy_tweening::lens::TransformPositionLens;
 use bevy_tweening::*;
@@ -79,5 +80,14 @@ pub fn move_player_system(
                     )));
                 }
             }
+    }
+}
+
+pub fn player_health_system(player_query: Query<&Player>, mut exit: EventWriter<AppExit>) {
+    if let Ok(player) =  player_query.get_single() {
+        if player.health <= 0 {
+            println!("Game Over!");
+            exit.send(AppExit);
+        }
     }
 }

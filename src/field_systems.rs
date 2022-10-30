@@ -161,7 +161,6 @@ fn create_level_from_string(level_data: String) -> [[i32; SIZE_IN_CELLS]; SIZE_I
     {
         for (i,char_vec) in level_vec.iter().enumerate().take(SIZE_IN_CELLS) {
             for j in 0..SIZE_IN_CELLS {
-                //if let Some(char_vec) = level_vec.get(i) {
                     if let Some(char) = char_vec.get(j) {
                         match char {
                             'W' => {
@@ -179,7 +178,6 @@ fn create_level_from_string(level_data: String) -> [[i32; SIZE_IN_CELLS]; SIZE_I
                             _ => (),
                         }
                     }
-                //}
             }
         }
     }
